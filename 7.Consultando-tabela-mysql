@@ -1,0 +1,13 @@
+MariaDB [meubanco]> use meubanco;
+Database changed
+MariaDB [meubanco]> use tables;
+ERROR 1049 (42000): Unknown database 'tables'
+MariaDB [meubanco]> select * FROM Pessoas;
++----------+--------+-----------+---------------+------------+
+| PessoaID | Nome   | Sobrenome | Endereco      | Cidade     |
++----------+--------+-----------+---------------+------------+
+|        1 | Carlos | da Silva  | Av. Badeleita | Colinas-MA |
++----------+--------+-----------+---------------+------------+
+1 row in set (0.001 sec)
+
+MariaDB [meubanco]> 
