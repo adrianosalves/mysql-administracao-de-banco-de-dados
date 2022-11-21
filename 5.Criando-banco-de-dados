@@ -1,0 +1,16 @@
+MariaDB [(none)]> create database meubanco;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| meubanco           |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [(none)]> 
