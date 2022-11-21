@@ -1,0 +1,17 @@
+MariaDB [(none)]> use meubanco;
+Database changed
+MariaDB [meubanco]> create table Pessoas (PessoaID int, Nome varchar(50), Sobrenome varchar(50), Endereco varchar(100), Cidade varchar(50));
+Query OK, 0 rows affected (0.035 sec)
+
+MariaDB [meubanco]> show tables;
++--------------------+
+| Tables_in_meubanco |
++--------------------+
+| Pessoas            |
++--------------------+
+1 row in set (0.000 sec)
+
+MariaDB [meubanco]> select * FROM Pessoas;
+Empty set (0.001 sec)
+
+MariaDB [meubanco]> 
