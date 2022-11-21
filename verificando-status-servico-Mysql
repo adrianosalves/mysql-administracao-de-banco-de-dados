@@ -1,0 +1,40 @@
+┌──(kali㉿kali)-[/disk2/publica]
+└─$ systemctl status mariadb               
+○ mariadb.service - MariaDB 10.6.10 database server
+     Loaded: loaded (/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
+     Active: inactive (dead)
+       Docs: man:mariadbd(8)
+             https://mariadb.com/kb/en/library/systemd/
+                                                                                                                             
+┌──(kali㉿kali)-[/disk2/publica]
+└─$ systemctl restart mariadb 
+                                                                                                                             
+┌──(kali㉿kali)-[/disk2/publica]
+└─$ sudo systemctl status mariadb 
+● mariadb.service - MariaDB 10.6.10 database server
+     Loaded: loaded (/lib/systemd/system/mariadb.service; disabled; vendor preset: disabled)
+     Active: active (running) since Sat 2022-11-19 20:22:52 EST; 14s ago
+       Docs: man:mariadbd(8)
+             https://mariadb.com/kb/en/library/systemd/
+    Process: 77756 ExecStartPre=/usr/bin/install -m 755 -o mysql -g root -d /var/run/mysqld (code=exited, status=0/SUCCESS)
+    Process: 77757 ExecStartPre=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+    Process: 77759 ExecStartPre=/bin/sh -c [ ! -e /usr/bin/galera_recovery ] && VAR= ||   VAR=`cd /usr/bin/..; /usr/bin/gale>
+    Process: 77808 ExecStartPost=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+    Process: 77810 ExecStartPost=/etc/mysql/debian-start (code=exited, status=0/SUCCESS)
+   Main PID: 77788 (mariadbd)
+     Status: "Taking your SQL requests now..."
+      Tasks: 13 (limit: 1066)
+     Memory: 95.2M
+        CPU: 1.313s
+     CGroup: /system.slice/mariadb.service
+             └─77788 /usr/sbin/mariadbd
+
+Nov 19 20:22:52 kali mariadbd[77788]: 2022-11-19 20:22:52 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buf>
+Nov 19 20:22:52 kali mariadbd[77788]: 2022-11-19 20:22:52 0 [Note] InnoDB: Buffer pool(s) load completed at 221119 20:22:52
+Nov 19 20:22:52 kali mariadbd[77788]: 2022-11-19 20:22:52 0 [Warning] You need to use --log-bin to make --expire-logs-days o>
+Nov 19 20:22:52 kali mariadbd[77788]: 2022-11-19 20:22:52 0 [Note] Server socket created on IP: '127.0.0.1'.
+Nov 19 20:22:52 kali mariadbd[77788]: 2022-11-19 20:22:52 0 [Note] /usr/sbin/mariadbd: ready for connections.
+Nov 19 20:22:52 kali mariadbd[77788]: Version: '10.6.10-MariaDB-1+b1'  socket: '/run/mysqld/mysqld.sock'  port: 3306  Debian>
+Nov 19 20:22:52 kali systemd[1]: Started MariaDB 10.6.10 database server.
+Nov 19 20:22:52 kali /etc/mysql/debian-start[77812]: Upgrading MySQL tables if necessary.
+Nov 19 20:22:52 kali /etc/mysql/debian-start[77824]: Checking for insecure root accounts.
